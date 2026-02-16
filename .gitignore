@@ -1,0 +1,76 @@
+# Step 1: Create .gitignore FIRST (VERY IMPORTANT - prevents pushing large files)
+@"
+# Virtual environment
+venv/
+.venv/
+
+# Data files (TOO LARGE for GitHub)
+data/raw/
+data/combined/
+data/augmented/
+data/processed/*.npy
+data/processed/*.pkl
+
+# Keep folder structure
+!data/raw/.gitkeep
+!data/combined/.gitkeep
+!data/augmented/.gitkeep
+!data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model files (large)
+outputs/models/*.pkl
+outputs/models/*.joblib
+
+# Outputs (regeneratable)
+outputs/eda_plots/
+"@ | Out-File -Encoding utf8 .gitignore
+
+# Step 2: Create .gitkeep files to preserve empty folders
+New-Item -ItemType File -Path "data\raw\.gitkeep" -Force
+New-Item -ItemType File -Path "data\combined\.gitkeep" -Force
+New-Item -ItemType File -Path "data\augmented\.gitkeep" -Force
+New-Item -ItemType File -Path "data\processed\.gitkeep" -Force
+New-Item -ItemType File -Path "outputs\eda_plots\.gitkeep" -Force
+New-Item -ItemType File -Path "outputs\models\.gitkeep" -Force
+
+# Step 3: Create README.md
+@"
+# Machine Learning-Assisted Skin Disease Classification System
+
+## Early Detection with Human-in-the-Loop Validation
+
+### Overview
+A supervised ML system for multi-class skin disease classification from clinical images,
+providing probability-based predictions to assist dermatologists.
+
+### Dataset
+- **Combined**: 28,647 images across 15 disease classes
+- **Source 1**: [Classification of Skin Diseases](https://www.kaggle.com/datasets/sponishflea/classification-of-skin-diseases) (1,494 images, 5 classes)
+- **Source 2**: [Skin Diseases Image Dataset](https://www.kaggle.com/datasets/ismailpromus/skin-diseases-image-dataset) (27,153 images, 10 classes)
+
+### Setup
+```bash
+python -m venv venv
+.\venv\Scripts\Activate  # Windows
+pip install -r requirements.txt
