@@ -1,0 +1,41 @@
+{
+  "total_images": 28647,
+  "num_classes": 15,
+  "classes": [
+    "1. Eczema 1677",
+    "10. Warts Molluscum and other Viral Infections - 2103",
+    "2. Melanoma 15.75k",
+    "3. Atopic Dermatitis - 1.25k",
+    "4. Basal Cell Carcinoma (BCC) 3323",
+    "5. Melanocytic Nevi (NV) - 7970",
+    "6. Benign Keratosis-like Lesions (BKL) 2624",
+    "7. Psoriasis pictures Lichen Planus and related diseases - 2k",
+    "8. Seborrheic Keratoses and other Benign Tumors - 1.8k",
+    "9. Tinea Ringworm Candidiasis and other Fungal Infections - 1.7k",
+    "acne",
+    "eksim",
+    "herpes",
+    "panu",
+    "rosacea"
+  ],
+  "class_counts": {
+    "eksim": 297,
+    "panu": 297,
+    "acne": 300,
+    "herpes": 300,
+    "rosacea": 300,
+    "3. Atopic Dermatitis - 1.25k": 1257,
+    "1. Eczema 1677": 1677,
+    "9. Tinea Ringworm Candidiasis and other Fungal Infections - 1.7k": 1702,
+    "8. Seborrheic Keratoses and other Benign Tumors - 1.8k": 1847,
+    "7. Psoriasis pictures Lichen Planus and related diseases - 2k": 2055,
+    "6. Benign Keratosis-like Lesions (BKL) 2624": 2079,
+    "10. Warts Molluscum and other Viral Infections - 2103": 2103,
+    "2. Melanoma 15.75k": 3140,
+    "4. Basal Cell Carcinoma (BCC) 3323": 3323,
+    "5. Melanocytic Nevi (NV) - 7970": 7970
+  },
+  "corrupt_count": 0,
+  "duplicate_count": 625,
+  "imbalance_ratio": 26.84
+}
